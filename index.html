@@ -33,9 +33,15 @@ Email: mdagolini@liveperson.com
     
       
       
-        <form id="foo" name="foo" > <!-- style="display:block" -->
+        <form id="foo" name="foo" style="display:none"> <!-- style="display:block" -->
                 <label for="Sender">Sender</label>
-                <input id="Sender" name="Sender" type="text" value="" />
+                 <select name="cars">
+                   <option value="volvo">Volvo</option>
+                   <option value="saab">Saab</option>
+                   <option value="fiat">Fiat</option>
+                   <option value="audi">Audi</option>
+                </select> 
+          
                 <label for="Message">Message</label>
                 <input id="Message" name="Message" type="text" value="" />
                 <label for="Name">Name</label>
@@ -48,51 +54,6 @@ Email: mdagolini@liveperson.com
             </form>
     
   
-      
-       <form id="foo" name="foo">
-
-
-
-<select name="a" form="foo">
-  <option value="In Ambito">In Ambito</option>
-  <option value="Non in Ambito">Non in Ambito</option>
-  <option value="Non Definito">Non Definito</option>
-
-</select>
-
-<br><br>
-
-<select name="b" form="foo">
-  <option value="Fatturazione">Fatturazione</option>
-  <option value="Problemi tecnici">Problemi tecnici</option>
-  <option value="Altro">Altro</option>
-
-</select>
-
-<br><br>
-
-<select name="c" form="foo">
-  <option value="Customer base">Customer base</option>
-  <option value="Mobile">Mobile</option>
-  <option value="Fisso">Fisso</option>
-
-</select>
-
-<br><br>
-
-<textarea rows="4" cols="50" name="d" form="foo">
-scrivi ciao!!!!!
-</textarea>
-
-<br><br>
-
-
- <input id="mybtn" type="submit" value="Invia" name="mysub" />
-
-
-</form>
-      
-      
         
             <script type="text/javascript">
               
