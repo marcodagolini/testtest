@@ -148,139 +148,42 @@ Email: mdagolini@liveperson.com
                 
                 var onSuccess1 = function(data) {
                 // Do something with the returning data
-                var elem=document.getElementById("Name");
+                var elem=document.getElementById("Phone");
                 elem.value=data;
                 };
                 
                 var onError1 = function(data) {
-                // Do something with the returning data
-                var elem=document.getElementById("Name");
-                elem.value="null";
-                };
-                
-                
-                var onSuccess2 = function(data) {
-                // Do something with the returning data
-                document.getElementById("EMail").value=data;
-                };
-                
-                
-                var onError2 = function(data) {
-                // Do something with the returning data
-                var elem=document.getElementById("EMail");
-                elem.value="null";
-                };
-                
-                var onSuccess3 = function(data) {
-                // Do something with the returning data
-                document.getElementById("Phone").value=data;
-              
-                };
-            
-                var onError3 = function(data) {
                 // Do something with the returning data
                 var elem=document.getElementById("Phone");
                 elem.value="null";
                 };
                 
                 
+                var onSuccess2 = function(data) {
+                // Do something with the returning data
+                document.getElementById("ConvID").value=data;
+                };
                 
                 
-                
+                var onError2 = function(data) {
+                // Do something with the returning data
+                var elem=document.getElementById("ConvID");
+                elem.value="null";
+                };
                 
                
+   
                
              
                 SDK.get('surveyQuestions.preChat.name.value', onSuccess1, onError1);
                 SDK.get('surveyQuestions.preChat.email.value', onSuccess2, onError2);
-                SDK.get('surveyQuestions.preChat.phone.value', onSuccess3, onError3);
                
-               
-                
-                // document.foo.mysub.click();
-              
-              
-             
-              
-                
-                
-                // else{
-                       // window.location.reload();
-                    // }
-                 
-                  var Time = setTimeout(function(){  
-                
-                  if (document.getElementById("Name").value) 
-                    {
-                      document.getElementById("mybtn").click();
-                      document.getElementById("Sender").value="";
-                      document.getElementById("Message").value="";
-                      document.getElementById("Name").value="";
-                      document.getElementById("EMail").value="";
-                      document.getElementById("Phone").value="";
-                    }
-              
-                   }, 1000);
-                 
-                 
-                 
-                }, 5000);
-              
-                var Time = setTimeout(function(){
-                  
-                     var isstarted = 0;
-               
-                     var updateCallback = function(data) {
-                       
-                       if (isstarted == 0) {
-                       
-                           document.getElementById("Message").value=data.newValue.lines[0].text;
-                           document.getElementById("Sender").value=data.newValue.lines[0].source;
-                           document.getElementById("mybtn").click();
-                         
-                          setTimeout(function(){
-                          
-                              document.getElementById("Message").value=data.newValue.lines[1].text;
-                              document.getElementById("Sender").value=data.newValue.lines[1].source;
-                              document.getElementById("mybtn").click();
-                           }, 1000);
                              
-                           isstarted = 1;
-                         
-                       }
-                       
-                       else {
-                       
-                          if ((data.newValue.lines[0].text.indexOf('<')> -1) && (data.newValue.lines[0].text.indexOf('>')> -1)) {
-                        
-                             var inizio = data.newValue.lines[0].text.indexOf('>')+1;
-                             var fine = data.newValue.lines[0].text.lastIndexOf('<');
-                        
-                        
-                             document.getElementById("Message").value=data.newValue.lines[0].text.substring(inizio,fine);
-                        
-                          }
-                       
-                          else {
-                         
-                             document.getElementById("Message").value=data.newValue.lines[0].text;
-                         
-                          }
-                       
-                          document.getElementById("Sender").value=data.newValue.lines[0].source;
-                          document.getElementById("mybtn").click();
-                      }
-                       
-                    };
-                  
-                    var notifyWhenDone = function(data) {
-                        
-                    };
-       
-                  
-                    SDK.bind('chatTranscript', updateCallback, notifyWhenDone);
-                    
-               }, 9000);
+                 
+                 
+                }, 3000);
+              
+               
               
            });
   
