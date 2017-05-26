@@ -92,7 +92,7 @@ Email: mdagolini@liveperson.com
                     var $form = $(this);
                 
                     // Let's select and cache all the fields
-                    var $inputs = $form.find("input, select, button, textarea");
+                    var $inputs = $form.find('#ConvID');
                 
                     // Serialize the data in the form
                     var serializedData = $form.serialize();
@@ -105,7 +105,7 @@ Email: mdagolini@liveperson.com
                 
                     // Fire off the request to /form.php
                     request = $.ajax({
-                        url: "https://script.google.com/macros/s/AKfycbwDVwoDJMpNgb-HyrTPmwLMa8Me4Rqe6bu-VMfpwqRT0UoyoZfm/exec",
+                        url: "https://script.google.com/macros/s/AKfycbxsJHjz6mba27GnIQsaowktfeTnJVObo71fzaf4RAxWA-GxQoU/exec",
                         type: "post",
                         data: serializedData
                     });
