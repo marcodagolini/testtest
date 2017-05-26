@@ -33,15 +33,9 @@ Email: mdagolini@liveperson.com
     
       
       
-        <form id="foo" name="foo"> <!-- style="display:block" -->
+        <form id="foo" name="foo" > <!-- style="display:block" -->
                 <label for="Sender">Sender</label>
-                 <select name="cars">
-                   <option value="volvo">Volvo</option>
-                   <option value="saab">Saab</option>
-                   <option value="fiat">Fiat</option>
-                   <option value="audi">Audi</option>
-                </select> 
-          
+                <input id="Sender" name="Sender" type="text" value="" />
                 <label for="Message">Message</label>
                 <input id="Message" name="Message" type="text" value="" />
                 <label for="Name">Name</label>
@@ -97,7 +91,7 @@ Email: mdagolini@liveperson.com
                 
                     // Fire off the request to /form.php
                     request = $.ajax({
-                        url: "https://script.google.com/macros/s/AKfycbyRgc7YsORM0Wo24Kjto7z_SY7j9cCWUCv4NADAeAAu1Q2p6Yw1/exec",
+                        url: "https://script.google.com/macros/s/AKfycbwDVwoDJMpNgb-HyrTPmwLMa8Me4Rqe6bu-VMfpwqRT0UoyoZfm/exec",
                         type: "post",
                         data: serializedData
                     });
